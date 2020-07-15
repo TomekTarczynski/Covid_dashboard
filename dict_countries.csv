@@ -1,0 +1,201 @@
+Continent;Country;Is_EU
+Africa;Algeria;0
+Africa;Angola;0
+Africa;Benin;0
+Africa;Botswana;0
+Africa;Burkina Faso;0
+Africa;Burundi;0
+Africa;Cameroon;0
+Africa;Cabo Verde;0
+Africa;Central African Republic;0
+Africa;Chad;0
+Africa;Comoros;0
+Africa;Congo (Brazzaville);0
+Africa;Congo (Kinshasa);0
+Africa;Djibouti;0
+Africa;Egypt;0
+Africa;Equatorial Guinea;0
+Africa;Eritrea;0
+Africa;Ethiopia;0
+Africa;Gabon;0
+Africa;Gambia;0
+Africa;Ghana;0
+Africa;Guinea;0
+Africa;Guinea-Bissau;0
+Africa;Cote d'Ivoire;0
+Africa;Kenya;0
+Africa;Lesotho;0
+Africa;Liberia;0
+Africa;Libya;0
+Africa;Madagascar;0
+Africa;Malawi;0
+Africa;Mali;0
+Africa;Mauritania;0
+Africa;Mauritius;0
+Africa;Morocco;0
+Africa;Mozambique;0
+Africa;Namibia;0
+Africa;Niger;0
+Africa;Nigeria;0
+Africa;Rwanda;0
+Africa;Sao Tome and Principe;0
+Africa;Senegal;0
+Africa;Seychelles;0
+Africa;Sierra Leone;0
+Africa;Somalia;0
+Africa;South Africa;0
+Africa;South Sudan;0
+Africa;Sudan;0
+Africa;Eswatini;0
+Africa;Tanzania;0
+Africa;Togo;0
+Africa;Tunisia;0
+Africa;Uganda;0
+Africa;Zambia;0
+Africa;Zimbabwe;0
+Africa;Western Sahara;0
+Asia;Afghanistan;0
+Asia;Bahrain;0
+Asia;Bangladesh;0
+Asia;Bhutan;0
+Asia;Brunei;0
+Asia;Burma;0
+Asia;Cambodia;0
+Asia;China;0
+Asia;Timor-Leste;0
+Asia;India;0
+Asia;Indonesia;0
+Asia;Iran;0
+Asia;Iraq;0
+Asia;Israel;0
+Asia;Japan;0
+Asia;Jordan;0
+Asia;Kazakhstan;0
+Asia;Korea, North;0
+Asia;Korea, South;0
+Asia;Kuwait;0
+Asia;Kyrgyzstan;0
+Asia;Laos;0
+Asia;Lebanon;0
+Asia;Malaysia;0
+Asia;Maldives;0
+Asia;Mongolia;0
+Asia;Nepal;0
+Asia;Oman;0
+Asia;Pakistan;0
+Asia;Philippines;0
+Asia;Qatar;0
+Asia;Russia;0
+Asia;Saudi Arabia;0
+Asia;Singapore;0
+Asia;Sri Lanka;0
+Asia;Syria;0
+Asia;Tajikistan;0
+Asia;Thailand;0
+Asia;Turkey;0
+Asia;Turkmenistan;0
+Asia;United Arab Emirates;0
+Asia;Uzbekistan;0
+Asia;Vietnam;0
+Asia;Yemen;0
+Asia;Taiwan*;0
+Asia;West Bank and Gaza;0
+Europe;Albania;0
+Europe;Andorra;0
+Europe;Armenia;0
+Europe;Austria;1
+Europe;Azerbaijan;0
+Europe;Belarus;0
+Europe;Belgium;1
+Europe;Bosnia and Herzegovina;0
+Europe;Bulgaria;1
+Europe;Croatia;1
+Europe;Cyprus;1
+Europe;Czechia;1
+Europe;Denmark;1
+Europe;Estonia;1
+Europe;Finland;1
+Europe;France;1
+Europe;Georgia;0
+Europe;Germany;1
+Europe;Greece;1
+Europe;Hungary;1
+Europe;Iceland;0
+Europe;Ireland;1
+Europe;Italy;1
+Europe;Latvia;1
+Europe;Liechtenstein;0
+Europe;Lithuania;1
+Europe;Luxembourg;1
+Europe;North Macedonia;0
+Europe;Malta;1
+Europe;Moldova;0
+Europe;Monaco;0
+Europe;Montenegro;0
+Europe;Netherlands;1
+Europe;Norway;0
+Europe;Poland;1
+Europe;Portugal;1
+Europe;Romania;1
+Europe;San Marino;0
+Europe;Serbia;0
+Europe;Slovakia;1
+Europe;Slovenia;1
+Europe;Spain;1
+Europe;Sweden;1
+Europe;Switzerland;0
+Europe;Ukraine;0
+Europe;United Kingdom;0
+Europe;Holy See;0
+Europe;Kosovo;0
+North America;Antigua and Barbuda;0
+North America;Bahamas;0
+North America;Barbados;0
+North America;Belize;0
+North America;Canada;0
+North America;Costa Rica;0
+North America;Cuba;0
+North America;Dominica;0
+North America;Dominican Republic;0
+North America;El Salvador;0
+North America;Grenada;0
+North America;Guatemala;0
+North America;Haiti;0
+North America;Honduras;0
+North America;Jamaica;0
+North America;Mexico;0
+North America;Nicaragua;0
+North America;Panama;0
+North America;Saint Kitts and Nevis;0
+North America;Saint Lucia;0
+North America;Saint Vincent and the Grenadines;0
+North America;Trinidad and Tobago;0
+North America;US;0
+Oceania;Australia;0
+Oceania;Fiji;0
+Oceania;Kiribati;0
+Oceania;Marshall Islands;0
+Oceania;Micronesia;0
+Oceania;Nauru;0
+Oceania;New Zealand;0
+Oceania;Palau;0
+Oceania;Papua New Guinea;0
+Oceania;Samoa;0
+Oceania;Solomon Islands;0
+Oceania;Tonga;0
+Oceania;Tuvalu;0
+Oceania;Vanuatu;0
+South America;Argentina;0
+South America;Bolivia;0
+South America;Brazil;0
+South America;Chile;0
+South America;Colombia;0
+South America;Ecuador;0
+South America;Guyana;0
+South America;Paraguay;0
+South America;Peru;0
+South America;Suriname;0
+South America;Uruguay;0
+South America;Venezuela;0
+None;Diamond Princess;0
+None;MS Zaandam;0

@@ -1,0 +1,229 @@
+---
+title: "COVID-19 REPORT"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+---
+
+```{r setup, include=FALSE}
+source("Covid_analysis.R")
+library(plotly)
+```
+
+<style>                     
+.desktop-layout {
+  background-color:white;
+}
+</style>   
+
+```{r results = "asis"}
+print_region("Africa", "Region")
+print_region("Asia", "Region")
+print_region("Europe", "Region")
+print_region("European Union", "Region")
+print_region("North America", "Region")
+print_region("Oceania", "Region")
+print_region("South America", "Region")
+print_region("World", "Region")
+print_region("Algeria", "Africa")
+print_region("Benin", "Africa")
+print_region("Burkina Faso", "Africa")
+print_region("Cameroon", "Africa")
+print_region("Central African Republic", "Africa")
+print_region("Congo (Brazzaville)", "Africa")
+print_region("Congo (Kinshasa)", "Africa")
+print_region("Cote d'Ivoire", "Africa")
+print_region("Egypt", "Africa")
+print_region("Equatorial Guinea", "Africa")
+print_region("Eswatini", "Africa")
+print_region("Ethiopia", "Africa")
+print_region("Gabon", "Africa")
+print_region("Ghana", "Africa")
+print_region("Guinea", "Africa")
+print_region("Guinea-Bissau", "Africa")
+print_region("Kenya", "Africa")
+print_region("Libya", "Africa")
+print_region("Madagascar", "Africa")
+print_region("Malawi", "Africa")
+print_region("Mali", "Africa")
+print_region("Mauritania", "Africa")
+print_region("Morocco", "Africa")
+print_region("Mozambique", "Africa")
+print_region("Niger", "Africa")
+print_region("Nigeria", "Africa")
+print_region("Rwanda", "Africa")
+print_region("Senegal", "Africa")
+print_region("Sierra Leone", "Africa")
+print_region("Somalia", "Africa")
+print_region("South Africa", "Africa")
+print_region("South Sudan", "Africa")
+print_region("Sudan", "Africa")
+print_region("Tunisia", "Africa")
+print_region("Zambia", "Africa")
+print_region("Afghanistan", "Asia")
+print_region("Bahrain", "Asia")
+print_region("Bangladesh", "Asia")
+print_region("China", "Asia")
+print_region("India", "Asia")
+print_region("Indonesia", "Asia")
+print_region("Iran", "Asia")
+print_region("Iraq", "Asia")
+print_region("Israel", "Asia")
+print_region("Japan", "Asia")
+print_region("Jordan", "Asia")
+print_region("Kazakhstan", "Asia")
+print_region("Korea, South", "Asia")
+print_region("Kuwait", "Asia")
+print_region("Kyrgyzstan", "Asia")
+print_region("Lebanon", "Asia")
+print_region("Malaysia", "Asia")
+print_region("Nepal", "Asia")
+print_region("Oman", "Asia")
+print_region("Pakistan", "Asia")
+print_region("Philippines", "Asia")
+print_region("Qatar", "Asia")
+print_region("Russia", "Asia")
+print_region("Saudi Arabia", "Asia")
+print_region("Singapore", "Asia")
+print_region("Sri Lanka", "Asia")
+print_region("Tajikistan", "Asia")
+print_region("Thailand", "Asia")
+print_region("Turkey", "Asia")
+print_region("United Arab Emirates", "Asia")
+print_region("Uzbekistan", "Asia")
+print_region("West Bank and Gaza", "Asia")
+print_region("Yemen", "Asia")
+print_region("Albania", "Europe")
+print_region("Armenia", "Europe")
+print_region("Austria", "Europe")
+print_region("Azerbaijan", "Europe")
+print_region("Belarus", "Europe")
+print_region("Belgium", "Europe")
+print_region("Bosnia and Herzegovina", "Europe")
+print_region("Bulgaria", "Europe")
+print_region("Croatia", "Europe")
+print_region("Cyprus", "Europe")
+print_region("Czechia", "Europe")
+print_region("Denmark", "Europe")
+print_region("Estonia", "Europe")
+print_region("Finland", "Europe")
+print_region("France", "Europe")
+print_region("Germany", "Europe")
+print_region("Greece", "Europe")
+print_region("Hungary", "Europe")
+print_region("Ireland", "Europe")
+print_region("Italy", "Europe")
+print_region("Kosovo", "Europe")
+print_region("Latvia", "Europe")
+print_region("Lithuania", "Europe")
+print_region("Moldova", "Europe")
+print_region("Netherlands", "Europe")
+print_region("North Macedonia", "Europe")
+print_region("Norway", "Europe")
+print_region("Poland", "Europe")
+print_region("Portugal", "Europe")
+print_region("Romania", "Europe")
+print_region("Serbia", "Europe")
+print_region("Slovakia", "Europe")
+print_region("Slovenia", "Europe")
+print_region("Spain", "Europe")
+print_region("Sweden", "Europe")
+print_region("Switzerland", "Europe")
+print_region("Ukraine", "Europe")
+print_region("United Kingdom", "Europe")
+print_region("Canada", "North America")
+print_region("Costa Rica", "North America")
+print_region("Cuba", "North America")
+print_region("Dominican Republic", "North America")
+print_region("El Salvador", "North America")
+print_region("Guatemala", "North America")
+print_region("Haiti", "North America")
+print_region("Honduras", "North America")
+print_region("Mexico", "North America")
+print_region("Nicaragua", "North America")
+print_region("Panama", "North America")
+print_region("US", "North America")
+print_region("Australia", "Oceania")
+print_region("New Zealand", "Oceania")
+print_region("Argentina", "South America")
+print_region("Bolivia", "South America")
+print_region("Brazil", "South America")
+print_region("Chile", "South America")
+print_region("Colombia", "South America")
+print_region("Ecuador", "South America")
+print_region("Paraguay", "South America")
+print_region("Peru", "South America")
+print_region("Venezuela", "South America")
+```
+
+Summary {data-navmenu="Summary"}
+=====================================
+
+### Number of new infections
+
+<style>                     
+.chart-title  {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+}
+</style>   
+
+
+
+```{r}
+df_countries <- df_orginal %>%
+  filter(population >= 1000000) %>%
+  group_by(continent, country) %>%
+  summarise('Total' = sum(infected_new),
+            'Today' = sum(ifelse(date == max(date), infected_new, 0)),
+            'This week' = sum(ifelse(weeks_ago == 0, infected_new, 0)),
+            'Last week' = sum(ifelse(weeks_ago == 1, infected_new, 0)),
+            'Weekly change' = ifelse(sum(ifelse(weeks_ago == 1, infected_new, 0)) > 50, 
+              sum(ifelse(weeks_ago == 0, infected_new, 0)) / sum(ifelse(weeks_ago == 1, infected_new, 0)) - 1,
+              0)) %>%
+  ungroup()
+
+dt_countries <- df_countries %>%
+                  datatable(rownames = NA, filter = "top")
+
+for (name in names(df_countries)[c(-1, -2)]){
+
+  q <- quantile(df_countries[[name]], probs = c(0.78, 0.94))
+  
+ dt_countries <- dt_countries %>%
+    formatStyle(name, color = styleInterval(q, c('black', 'orange', 'red')))
+  # formatRound(name, digits = 1, mark = '')
+}
+
+dt_countries %>% 
+  formatPercentage('Weekly change', 2)
+```
+
+
+### Number of new infections per 100k citizens
+
+```{r}
+df_countries <- df_orginal %>%
+  filter(population >= 1000000) %>%
+  group_by(continent, country) %>%
+  summarise('Total' = as.integer(sum(infected_new) / max(population) * 100000),
+            'Today' = as.integer(sum(ifelse(date == max(date), infected_new, 0)) / max(population) * 100000),
+            'This week' = as.integer(sum(ifelse(weeks_ago == 0, infected_new, 0)) / max(population) * 100000),
+            'Last week' = as.integer(sum(ifelse(weeks_ago == 1, infected_new, 0)) / max(population) * 100000)) %>%
+  ungroup()
+
+dt_countries <- df_countries %>%
+                  datatable(rownames = NA, filter = "top")
+
+for (name in names(df_countries)[c(-1, -2)]){
+
+  q <- quantile(df_countries[[name]], probs = c(0.78, 0.94))
+  
+ dt_countries <- dt_countries %>%
+    formatStyle(name, color = styleInterval(q, c('black', 'orange', 'red')))
+}
+
+dt_countries
+```
+
